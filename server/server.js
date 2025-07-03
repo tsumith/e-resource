@@ -10,11 +10,9 @@ dotenv.config();
 connectDB();
 
 const app = express();
-const allowedOrigin = process.env.FRONTEND_URI || 'http://localhost:3000';
-
 app.use(cors({
-    origin: allowedOrigin,
-    credentials: true,
+    origin: "https://e-resource-client.vercel.app",
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
 }));
 
 app.use(express.json());
