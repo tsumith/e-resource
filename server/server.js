@@ -11,9 +11,6 @@ connectDB();
 
 const app = express();
 app.use(cors());
-app.use('/', (req, res) => {
-    res.send("Welcome to the server");
-});
 app.use(express.json());
 app.use('/api/auth', authRoutes);
 app.use('/api/resources', resourceRoutes);
