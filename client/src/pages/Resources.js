@@ -13,7 +13,7 @@ function Resources() {
     useEffect(() => {
         const fetchResources = async () => {
             try {
-                const res = await fetch('http://localhost:5000/api/resources');
+                const res = await fetch(`${process.env.REACT_APP_API_URI}/api/resources`);
                 const data = await res.json();
                 setResources(data);
             } catch (err) {

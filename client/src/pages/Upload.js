@@ -36,7 +36,7 @@ function Upload() {
         try {
             const token = localStorage.getItem('token');
             const response = await axios.post(
-                'http://localhost:5000/api/resources/upload',
+                `${process.env.REACT_APP_API_URI}/api/resources/upload`,
                 { ...form },
                 {
                     headers: {
