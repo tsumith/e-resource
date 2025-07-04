@@ -10,9 +10,21 @@ dotenv.config();
 connectDB();
 
 const app = express();
+
+const allowedOrigins = [
+    'https://e-resource-client.vercel.app',
+    'http://localhost:3000' // <-- Add this for local development
+];
+
 app.use(cors({
-    origin: "https://e-resource-client.vercel.app",
-    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    origin: function (origin, callback) {
+        if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, true);
+        } else {
+            callback(new Error('Not allowed by CORS'));
+        }
+    },
+    credentials: true // if you're using cookies or Authorization headers
 }));
 
 app.use(express.json());
