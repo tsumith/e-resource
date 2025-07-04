@@ -1,0 +1,48 @@
+.text-glow {
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.4), 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+.hero-section {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    min-height: 100vh;
+    padding: 5rem 0;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.icon-large {
+    font-size: 2.5rem;
+}
+
+.bg-gradient-dark {
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+}
+
+.timeline-step {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+}
+
+.testimonial-card {
+    border-left: 4px solid #00e5ff;
+}
+
+.stat-card {
+    transition: transform 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+}

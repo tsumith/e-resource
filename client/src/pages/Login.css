@@ -1,0 +1,31 @@
+.login-page {
+    background: linear-gradient(135deg, #0f0f1f, #1c1c2e);
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(14px);
+    border-radius: 1rem;
+    color: #fff;
+}
+
+.text-glow {
+    color: #00e5ff;
+    text-shadow: 0 0 10px rgba(0, 229, 255, 0.6);
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 229, 255, 0.3);
+    border-color: #00e5ff;
+}
+
+button[type="submit"] {
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+}
+
+button[type="submit"]:hover {
+    transform: scale(1.03);
+    background-color: #00c4e4 !important;
+    border-color: #00c4e4 !important;
+}

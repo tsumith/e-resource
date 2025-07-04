@@ -1,0 +1,24 @@
+.resources-page {
+    background: linear-gradient(to bottom, #0f172a, #1e293b);
+}
+
+.resource-card {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(12px);
+    transition: all 0.3s ease;
+    border-radius: 1rem;
+}
+
+.resource-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 20px rgba(0, 229, 255, 0.2);
+}
+
+.text-glow {
+    color: #00e5ff;
+    text-shadow: 0 0 10px rgba(0, 229, 255, 0.4);
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}

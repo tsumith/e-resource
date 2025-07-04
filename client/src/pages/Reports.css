@@ -1,0 +1,22 @@
+.text-glow {
+    color: #00e5ff;
+    text-shadow: 0 0 10px rgba(0, 229, 255, 0.6);
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 20px rgba(0, 229, 255, 0.15);
+}
+
+.placeholder-chart {
+    background: rgba(255, 255, 255, 0.03);
+    font-size: 1.5rem;
+    border-style: dashed;
+}

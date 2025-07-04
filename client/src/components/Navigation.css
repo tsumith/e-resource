@@ -1,0 +1,54 @@
+.navbar-modern {
+    background: rgba(10, 10, 20, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    z-index: 1000;
+}
+
+.nav-link-modern {
+    color: #ccc !important;
+    transition: all 0.2s ease;
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-link-modern:hover {
+    color: #fff !important;
+    text-decoration: none;
+}
+
+.nav-link-modern::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background: #00e5ff;
+    transition: 0.3s ease;
+}
+
+.nav-link-modern:hover::after {
+    width: 100%;
+}
+
+.dropdown-modern .dropdown-menu {
+    background-color: #1f1f2f;
+    border: none;
+    color: #fff;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 0 10px rgba(0, 229, 255, 0.3);
+}
+
+.dropdown-modern .dropdown-item {
+    color: #fff;
+}
+
+.dropdown-modern .dropdown-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.text-glow {
+    color: #00e5ff;
+    text-shadow: 0 0 8px #00e5ff, 0 0 12px rgba(0, 229, 255, 0.3);
+}
