@@ -124,6 +124,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Row, Col, Button, Card } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './Home.css';
 
 function Home() {
@@ -215,6 +216,7 @@ function Home() {
                 </Container>
             </section>
 
+
             {/* Stats */}
             <section className="section-stats py-5 bg-dark">
                 <Container>
@@ -224,9 +226,9 @@ function Home() {
                         { value: "📂 50,000+", label: "Resources" },
                         { value: "🏛️ 100+", label: "Institutions" }].map((item, i) => (
                             <Col md={3} key={i}>
-                                <div className="stat-card py-4 px-3 bg-dark rounded-4 shadow-sm h-100">
-                                    <h3 className="fw-bold display-6 mb-2">{item.value}</h3>
-                                    <p className="text-muted mb-0">{item.label}</p>
+                                <div className="stat-card glass-card text-white py-4 px-3 h-100 rounded-4">
+                                    <h3 className="fw-bold display-6 text-white mb-2">{item.value}</h3>
+                                    <p className="text-white-50 mb-0">{item.label}</p>
                                 </div>
                             </Col>
                         ))}

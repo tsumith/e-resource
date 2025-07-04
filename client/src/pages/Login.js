@@ -98,6 +98,7 @@ import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Container, Form, Button, Card } from 'react-bootstrap';
 import { AuthContext } from '../context/AuthContext';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './Login.css';
 
 function Login() {
@@ -112,7 +113,7 @@ function Login() {
         e.preventDefault();
 
         try {
-            const response = await fetch(`https://e-resource-server.onrender.com/api/auth/login`, {
+            const response = await fetch(`${process.env.REACT_APP_API_URI_PROD}/api/auth/login`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
 

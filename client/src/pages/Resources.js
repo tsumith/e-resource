@@ -108,7 +108,7 @@ import {
     Container, Row, Col, Card, Button, Form, InputGroup
 } from 'react-bootstrap';
 import { AuthContext } from '../context/AuthContext';
-import axios from 'axios';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './Resources.css';
 
 function Resources() {
@@ -120,7 +120,7 @@ function Resources() {
     useEffect(() => {
         const fetchResources = async () => {
             try {
-                const res = await fetch(`${process.env.REACT_APP_API_URI}/api/resources`);
+                const res = await fetch(`${process.env.REACT_APP_API_URI_PROD}/api/resources`);
                 const data = await res.json();
                 setResources(data);
             } catch (err) {
