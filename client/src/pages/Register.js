@@ -50,21 +50,31 @@
 import React, { useState } from 'react';
 import { Form, Button, Container, Card } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 import './Register.css';
 function Register() {
-    const [form, setForm] = useState({ email: '', password: '', role: 'student' });
+    const [form, setForm] = useState({ email: '', password: '', userType: 'student' });
+
     const navigate = useNavigate();
 
     const handleChange = (e) => {
         setForm({ ...form, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log("Register Form:", form);
-        alert("Account created (mock). Proceed to login.");
-        navigate('/login');
+
+        try {
+            const res = await axios.post(`${process.env.REACT_APP_API_URI_PROD}/api/auth/register`, form);
+
+            alert("Account created successfully. Please log in.");
+            navigate('/login');
+        } catch (err) {
+            console.error("Registration failed:", err);
+            alert(err.response?.data?.message || "Registration failed. Please try again.");
+        }
     };
+
 
     return (
         <div className="register-page d-flex justify-content-center align-items-center min-vh-100 bg-dark text-white">
@@ -75,8 +85,8 @@ function Register() {
                         <Form.Group className="mb-3">
                             <Form.Label>User Role</Form.Label>
                             <Form.Select
-                                name="role"
-                                value={form.role}
+                                name="userType"
+                                value={form.userType}
                                 onChange={handleChange}
                                 required
                                 className="form-control bg-dark text-white border-secondary"
